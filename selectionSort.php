@@ -1,32 +1,17 @@
 <?php
 
 
-$maisBarato = 0;
-$atual = 0;
-$produtos =  [1000, 46, 16, 42, 17];
+// Encontrar o menor valor
+// InsertionSort
 
-echo "Antes" . PHP_EOL;
-imprimeArray($produtos);
+$values = [2,4,5,2,6,8,22,1];
+$menor =  0;
 
-for ($atual = 1; $atual < count($produtos); $atual++) {
-  $analiseAtual = $atual;
-  $anterior = $atual-1;
-
-  while ( $produtos[$analiseAtual] > $produtos[$anterior]) {
-    $produtoComMaiorValor = $produtos[$analiseAtual];
-    $produtos[$analiseAtual] = $produtos[$anterior];
-    $produtos[$anterior] = $produtoComMaiorValor;
-    $analiseAtual--;
+for ($i=0; $i < count($values); $i++) { 
+  if($values[$i] < $values[$menor]){
+    $menor = $i;
   }
 }
-
-echo "Depois" . PHP_EOL;
-imprimeArray($produtos);
+echo "menor valor é:" . $values[$menor];
 
 
-function imprimeArray($array)
-{
-  for ($i = 0; $i < count($array); $i++) {
-    echo $array[$i] . PHP_EOL;
-  }
-}
