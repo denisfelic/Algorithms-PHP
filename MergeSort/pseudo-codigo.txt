@@ -1,4 +1,0 @@
-Tenho um array fora de ordem.
-Divido o array em duas partes e ordeno cada uma separadamente
-Dado os dois arrays ordenados, intercalo eles em um único array ordenado
-
